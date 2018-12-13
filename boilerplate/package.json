@@ -1,0 +1,55 @@
+{
+  "name": "egg-webpack-multiple-pages-boilerplate",
+  "version": "1.0.0",
+  "description": "Minimum webpack multiple pages boilerplate for egg",
+  "private": true,
+  "dependencies": {
+    "egg": "^2.2.1",
+    "egg-scripts": "^2.5.0",
+    "egg-view-nunjucks": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "assets-webpack-plugin": "^3.9.7",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "babel-loader": "^8.0.4",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^6.0.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-egg-webpack-multiple-pages-boilerplate",
+    "stop": "egg-scripts stop --title=egg-server-egg-webpack-multiple-pages-boilerplate",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "dev-client": "webpack-dev-server --open --mode development --config build/webpack.config.js",
+    "publish-client": "rm -rf app/public && webpack --mode production --config build/webpack.config.js"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "hi.heweiguang@gmail.com",
+  "license": "MIT"
+}
