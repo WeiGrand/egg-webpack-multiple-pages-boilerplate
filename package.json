@@ -1,7 +1,17 @@
 {
   "name": "egg-webpack-multiple-pages-boilerplate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Minimum webpack multiple pages boilerplate for egg",
+  "keywords": [
+    "web",
+    "app",
+    "application",
+    "koa",
+    "egg",
+    "boilerplate",
+    "multiple",
+    "webpack"
+  ],
   "scripts": {
     "autod": "autod",
     "lint": "eslint .",
@@ -33,5 +43,6 @@
   "ci": {
     "version": "8"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "license": "MIT"
 }

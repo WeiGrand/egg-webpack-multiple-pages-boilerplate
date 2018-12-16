@@ -16,4 +16,26 @@ $ npm run dev # server
 $ open http://localhost:7001
 ```
 
-See [egg-init](https://github.com/eggjs/egg-init) for more detail.
+## Structure
+
+```
+app # server root
+├── controller
+│   ├── about.js
+│   └── home.js
+├── extend
+│   └── helper.js
+├── public
+├── router.js
+└── view
+    ├── about.tpl
+    ├── home.tpl
+    └── layout.tpl
+src # client root
+└── pages
+    ├── about
+    │   └── index.js
+    └── home
+        └── index.js
+
+```

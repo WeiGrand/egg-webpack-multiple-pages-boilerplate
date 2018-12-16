@@ -1,39 +1,41 @@
 # egg-webpack-multiple-pages-boilerplate
 
-Egg webpack multiple pages boilerplate
+最小化 egg + webpack 多页应用配置样板
 
-## 快速入门
+## 安装
 
-<!-- 在此次添加使用文档 -->
-
-如需进一步了解，参见 [egg 文档][egg]。
-
-### 本地开发
+**不要直接用 `npm i` 安装该 npm 包**
 
 ```bash
+$ npm i -g egg-init
+$ egg-init --package egg-webpack-multiple-pages-boilerplate showcase
+$ cd showcase
 $ npm i
-$ npm run dev
-$ open http://localhost:7001/
+$ npm run dev-client # client
+$ npm run dev # server
+$ open http://localhost:7001
 ```
 
-### 部署
+## 结构
 
-```bash
-$ npm start
-$ npm stop
 ```
+app # 服务端文件根目录
+├── controller
+│   ├── about.js
+│   └── home.js
+├── extend
+│   └── helper.js
+├── public
+├── router.js
+└── view
+    ├── about.tpl
+    ├── home.tpl
+    └── layout.tpl
+src # 客户端文件根目录
+└── pages
+    ├── about
+    │   └── index.js
+    └── home
+        └── index.js
 
-### 单元测试
-
-- [egg-bin] 内置了 [mocha], [thunk-mocha], [power-assert], [istanbul] 等框架，让你可以专注于写单元测试，无需理会配套工具。
-- 断言库非常推荐使用 [power-assert]。
-- 具体参见 [egg 文档 - 单元测试](https://eggjs.org/zh-cn/core/unittest)。
-
-### 内置指令
-
-- 使用 `npm run lint` 来做代码风格检查。
-- 使用 `npm test` 来执行单元测试。
-- 使用 `npm run autod` 来自动检测依赖更新，详细参见 [autod](https://www.npmjs.com/package/autod) 。
-
-
-[egg]: https://eggjs.org
+```
