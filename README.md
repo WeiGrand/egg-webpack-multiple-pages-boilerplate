@@ -45,4 +45,4 @@ src # client root
 ### `v1.1.0`
 
 1. Add CSS/LESS build-in support.
-2. Make <head/> children configurable
+2. Make `<head/>` children configurable
