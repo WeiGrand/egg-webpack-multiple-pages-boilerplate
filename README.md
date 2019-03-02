@@ -39,3 +39,10 @@ src # client root
         └── index.js
 
 ```
+
+## Change Log
+
+### `v1.1.0`
+
+1. Add CSS/LESS build-in support.
+2. Make <head/> children configurable
